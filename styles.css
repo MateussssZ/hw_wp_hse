@@ -1,0 +1,192 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.photo-0 {
+    --background-color:rgb(196, 191, 191);
+    --color:black;
+    --box-shadow:rgb(160, 158, 134);
+}
+
+.photo-1 {
+    --background-color:#e5deb1;
+    --color:black;
+    --box-shadow:rgb(214, 207, 100);
+}
+
+.photo-2 {
+    --background-color:rgb(8, 3, 22);
+    --color:white;
+    --box-shadow:#258f8f;
+}
+
+
+body{
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+header {
+    color: var(--color); /* Белый текст для контраста */
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: auto;
+}
+footer {
+    width: 100%;
+    color: var(--color); /* Белый текст для контраста */
+    padding: 20px 0;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0px 6px var(--box-shadow); /* Тень сверху для глубины */
+    display: flex; /* Используем Flexbox для выравнивания */
+    justify-content: space-between; /* Разделяем h3 и nav по краям */
+    align-items: center; /* Выравниваем по вертикали */
+    margin-top: auto; /* Прижимаем footer к низу */
+}
+
+.home{
+    flex: 1; /* Занимает всё доступное пространство */
+    padding: 20px;
+}
+
+/* Стили для header */
+header {
+    z-index: 1000;
+    box-shadow: 0px 0px 11px 0px var(--box-shadow);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #e0f7fa; /* Светлый cyan при наведении */
+}
+
+/* Стили для footer */
+
+
+footer h3 {
+    margin: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Стили для nav */
+footer nav {
+    text-align: center; /* Выравниваем текст в nav по правому краю */
+    margin-right: 50px;
+    font-size: 1.5rem;
+}
+
+footer nav p {
+    margin: 0 0 10px 0; /* Отступ снизу для заголовка "Мои контакты" */
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #00ddfa; /* Светлый cyan при наведении */
+}
+
+/* Стили для слайдера */
+.slider {
+    position: relative;
+    max-width: 550px; /* Максимальная ширина слайдера */
+    max-height: 750px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 2px solid var(--background-color); /* Рамка cyan */
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    display: block;
+    border-radius: 8px;
+    width: 800px;
+    height: 600px;
+}
+
+/* Кнопки переключения */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.facts {
+    padding-left: 20px;
+    color: var(--color)
+}
+
+.facts li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--color)
+}

@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body class="photo-">
+    <header>
+        <h1 class="page-heading">Welcome to my page</h1><nav id="шиморин-матвей-алексеевич-31102004">Шиморин Матвей Алексеевич, 31.10.2004</nav>
+    </header>
     <div class="home">
-        <h1 class="page-heading">Welcome to my blog</h1><h1 id="шиморин-матвей-алексеевич-31102004">Шиморин Матвей Алексеевич, 31.10.2004</h1>
-        <h2 id="студент-3-курса-вшэ-плейбой-филантроп-и-просто-молодец-кароч">Студент 3 курса ВШЭ, плейбой, филантроп и просто молодец кароч</h2>
+        <h2 class="description">Студент 3 курса ВШЭ, плейбой, филантроп и просто молодец кароч</h2>
+
+        <!-- Слайдер изображений -->
+    <div class="slider">
+        <div class="slides">
+            <img src="./assets/image_3.jpg" alt="Я в форме" class="slide">
+            <img src="./assets/image_2.jpg" alt="Фото с тачкой" class="slide">
+            <img src="./assets/image_4.jpg" alt="Просто я" class="slide">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
         
-        <h2 id="интересные-факты">Интересные факты:</h2>
-        <ul>
-          <li><em>Счастливый обладатель чёрной ВАЗ2115</em></li>
-          <li><em>Лёгкий на подъём(позовите куда-нибудь потусить пж)</em></li>
-          <li>Любит нести всякую чушь(<strong>ай он что за тигр Маяковский</strong>)</li>
-        </ul>
+        <h2 class="facts">Интересные факты:
+            <ul>
+                <li><em>Счастливый обладатель чёрной ВАЗ2115</em></li>
+                <li><em>Лёгкий на подъём(позовите куда-нибудь потусить пж)</em></li>
+                <li><em>Любит нести всякую чушь(<strong>ай он что за тигр Маяковский</strong>)</em></li>
+              </ul>
+        </h2>
+        
 
         </div>
+    <footer>
+        <h3>Сайт Шиморина Матвея</h3>
+        <nav>
+            <p>Мои контакты</p>
+            <a href="https://t.me/VkusnoPohaval">Телега</a><br>
+            <a href="https://t.me/TazikMatveya">Тгк про тачку</a><br>
+            <a href= "https://instagram.com/yamateusz">Inst</a><br>
+            <a href="https://vk.com/m.shimorin">Vk</a><br>
+        </nav>
+    </footer>
 </body>
+<script src="main.js"></script>
 </html>
