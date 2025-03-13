@@ -28,19 +28,18 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh; 
+    font: italic small-caps bold 16px/2 cursive;
 }
 header {
     color: var(--color); /* Белый текст для контраста */
     padding: 20px 0;
     text-align: center;
-    font-family: 'Arial', sans-serif;
     margin-bottom: auto;
 }
 footer {
     width: 100%;
     color: var(--color); /* Белый текст для контраста */
     padding: 20px 0;
-    font-family: 'Arial', sans-serif;
     box-shadow: 0 0px 6px var(--box-shadow); /* Тень сверху для глубины */
     display: flex; /* Используем Flexbox для выравнивания */
     justify-content: space-between; /* Разделяем h3 и nav по краям */
@@ -50,6 +49,7 @@ footer {
 
 .home{
     flex: 1; /* Занимает всё доступное пространство */
+    font: italic small-caps bold 16px/2 cursive;
     padding: 20px;
 }
 
@@ -120,6 +120,47 @@ footer a:hover {
     color: #00ddfa; /* Светлый cyan при наведении */
 }
 
+@media (max-width: 768px) {
+    footer{
+        flex-direction: column;
+    }
+    /* Скрываем заголовок h3 */
+    footer h3 {
+        display: none;
+    }
+
+    /* Преобразуем ссылки в матрицу 2x2 */
+    footer nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Два столбца */
+        grid-template-rows: repeat(2, 1fr); /* Две строки */
+        gap: 10px; /* Расстояние между элементами */
+        margin-right: 0; /* Убираем отступ справа */
+    }
+
+    /* Убираем <br> внутри nav, так как они больше не нужны */
+    footer nav br {
+        display: none;
+    }
+
+    /* Выравниваем текст ссылок по центру */
+    footer nav a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px; /* Отступы для ссылок */
+        background-color: rgba(255, 255, 255, 0.1); /* Легкий фон для ссылок */
+        border-radius: 5px; /* Скругление углов */
+    }
+
+    /* Убираем отступы у <p> внутри nav */
+    footer nav p {
+        grid-column: 1 / -1; /* Растягиваем на все столбцы */
+        text-align: center; /* Выравниваем текст по центру */
+        margin: 0 0 10px 0; /* Отступ снизу */
+    }
+}
+
 /* Стили для слайдера */
 .slider {
     position: relative;
@@ -129,7 +170,7 @@ footer a:hover {
     overflow: hidden;
     border: 2px solid var(--background-color); /* Рамка cyan */
     border-radius: 10px;
-    box-shadow: 0 0 6px 0px;
+    box-shadow: 0 0 6px 0px var(--box-shadow);
 }
 
 .slides {
@@ -186,6 +227,8 @@ footer a:hover {
 }
 
 .description {
+    margin: 20px auto;
+    text-align: center;
     line-height: 1.6;
     margin-bottom: 20px;
     color: var(--color)
